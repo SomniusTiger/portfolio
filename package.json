@@ -15,6 +15,7 @@
   "homepage": "https://github.com/SomniusTiger/portfolio#readme",
   "sasslintConfig": ".sass-lint.yml",
   "devDependencies": {
+    "ansi-colors": "^2.0.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "eslint-config-eslint": "^4.0.0",
@@ -24,6 +25,7 @@
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
+    "gulp-htmllint": "0.0.15",
     "gulp-htmlmin": "^4.0.0",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
