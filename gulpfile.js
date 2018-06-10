@@ -111,10 +111,13 @@ gulp.task("build:scripts", () =>
     .pipe(gulp.dest("dist/scripts"))
 );
 
-// Production Asset Build, only runs linters here
+// Production Asset Build, runs linters before outputting files here
 gulp.task("production:markup", gulp.series("htmlLint", "htmlmin"));
 gulp.task("production:styles", gulp.series("sassLint", "sass", "cssmin"));
 gulp.task("production:scripts", gulp.series("eslint", "concat", "uglify"));
+
+// Lints all relevant files. No errors means you’re all set!
+gulp.task("lint", gulp.series("htmlLint", "sassLint", "eslint"));
 
 // Watch scripts for development asset builds
 gulp.task("watch:markup", () =>
