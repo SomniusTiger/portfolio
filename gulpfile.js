@@ -15,8 +15,10 @@ const gulp = require("gulp"),
   uglify = require("gulp-uglify");
 
 gulp.task("sassLint", () =>
-  gulp.src("sass/**/*.s+(a|c)ss")
-    .pipe(sassLint())
+  gulp.src("src/**/*.s+(a|c)ss")
+    .pipe(sassLint({
+      configFile: "./.sass-lint.yml"
+    }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
 );
