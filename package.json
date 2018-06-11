@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio of Eoin Thomas O'Hehir (Somnius)",
-  "main": "index.js",
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SomniusTiger/portfolio.git"
