@@ -1,0 +1,32 @@
+// Contains all grid-related stylesheet
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+// Creates grid cells for multiple breakpoints.
+// Main breakpoints, from smallest to largest, are:
+// Mobile, Tablet, Desktop
+@for $i from 1 through 12 {
+  .grid-cell-mobile-#{$i} {
+    width: #{($i/12) * 100%};
+  }
+}
+@media screen and (min-width: 600px) {
+  @for $i from 1 through 12 {
+    .grid-cell-tablet-#{$i} {
+      width: #{($i/12) * 100%};
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  @for $i from 1 through 12 {
+    .grid-cell-desktop-#{$i} {
+      width: #{($i/12) * 100%};
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// All colors across the site
+// Array and functions inspired by https://daveredfern.com/2016/getting-sass-using-arrays-functions-loops/
+// Thank you!
+
+// Array of all colors
+$colors: (
+  white: #fff,
+  black: #000,
+  greyscale: (
+    lightest: #f7f7f7,
+    light: #cacaca,
+    medium: #999,
+    dark: #666,
+    darkest: #222
+  )
+);
+
+// Returns color from colors array
+@function color($color, $tone) {
+  @return map-get(map-get($colors, $color), $tone);
+}
+
+@each $color-key, $color-value in $colors {
+  @each $tone-key, $tone-value in $color-value {
+    .background_color-#{$color-key}-#{$tone-key} {
+      background-color: $tone-value;
+    }
+
+    .color-#{$color-key}-#{$tone-key} {
+      color: $tone-value;
+    }
+
+    .color_hover-#{$color-key}-#{$tone-key} {
+      &:hover {
+        color: $tone-value;
+      }
+    }
+  }
+}

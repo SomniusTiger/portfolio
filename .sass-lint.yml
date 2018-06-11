@@ -17,7 +17,7 @@ rules:
   single-line-per-selector: 2
 
   # Disallows
-  no-color-keywords: 2
+  no-color-keywords: 0
   no-color-literals: 2
   no-css-comments: 2
   no-debug: 2
@@ -44,7 +44,7 @@ rules:
   force-pseudo-nesting: 2
 
   # Name Formats
-  class-name-format: 2
+  class-name-format: 0
   function-name-format: 2
   id-name-format: 0
   mixin-name-format: 2

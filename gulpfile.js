@@ -123,15 +123,15 @@ gulp.task("lint", gulp.series("htmlLint", "sassLint", "eslint"));
 
 // Watch scripts for development asset builds
 gulp.task("watch:markup", () =>
-  gulp.watch("src/**/*.html", gulp.series("build:markup"))
+  gulp.watch("src/**/*.html", gulp.series("htmlLint", "build:markup"))
 );
 
 gulp.task("watch:styles", () =>
-  gulp.watch("src/**/*.scss", gulp.series("build:styles"))
+  gulp.watch("src/**/*.scss", gulp.series("sassLint", "build:styles"))
 );
 
 gulp.task("watch:scripts", () =>
-  gulp.watch("src/**/*.js", gulp.series("build:scripts"))
+  gulp.watch("src/**/*.js", gulp.series("eslint", "build:scripts"))
 );
 
 // Defines watch, default, and production build tasks
