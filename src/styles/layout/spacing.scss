@@ -1,7 +1,7 @@
 // General spacing styles
 
 // Simple loop from https://gist.github.com/jacurtis/30da4bf9a6c9b9b5cc0aebac512ca7c9 - Thanks, jacurtis!
-$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 80, 100); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 100); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
@@ -10,8 +10,16 @@ $sides: (top, bottom, left, right); // Leave this variable alone
       margin-#{$side}: #{$space}px;
     }
 
+    .margin-neg-#{$side}-#{$space} {
+      margin-#{$side}: -#{$space}px;
+    }
+
     .padding-#{$side}-#{$space} {
       padding-#{$side}: #{$space}px;
+    }
+
+    .padding-neg-#{$side}-#{$space} {
+      padding-#{$side}: -#{$space}px;
     }
   }
 }

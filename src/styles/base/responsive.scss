@@ -1,0 +1,12 @@
+// Responsive mixins for consistency
+@mixin media-tablet {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}

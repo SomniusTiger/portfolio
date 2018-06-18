@@ -4,14 +4,41 @@
 
 // Array of all colors
 $colors: (
-  white: #fff,
-  black: #000,
+  true-white: white,
+  white-a: (
+    50: rgba(255, 255, 255, 0.5),
+    75: rgba(255, 255, 255, 0.75),
+    100: rgba(255, 255, 255, 1)
+  ),
+  black-a: (
+    40: rgba(0, 0, 0, 0.4),
+    50: rgba(0, 0, 0, 0.5),
+    75: rgba(0, 0, 0, 0.75),
+    100: rgba(0, 0, 0, 1)
+  ),
+  true-black: black,
   greyscale: (
     lightest: #f7f7f7,
     light: #cacaca,
     medium: #999,
     dark: #666,
     darkest: #222
+  ),
+  grey-a: (
+    50: rgba(125, 125, 125, 0.5),
+    75: rgba(125, 125, 125, 0.75)
+  ),
+
+  blue: (
+    base: #045aaf,
+    medium: #5285b4,
+    dark: #1f3966
+  ),
+  magenta: (
+    base: #862238
+  ),
+  pink: (
+    base: #804546
   )
 );
 
@@ -22,17 +49,45 @@ $colors: (
 
 @each $color-key, $color-value in $colors {
   @each $tone-key, $tone-value in $color-value {
-    .background_color-#{$color-key}-#{$tone-key} {
-      background-color: $tone-value;
-    }
+    @if $tone-key == base {
+      .background_color-#{$color-key} {
+        background-color: $tone-value;
+      }
 
-    .color-#{$color-key}-#{$tone-key} {
-      color: $tone-value;
-    }
-
-    .color_hover-#{$color-key}-#{$tone-key} {
-      &:hover {
+      .color-#{$color-key} {
         color: $tone-value;
+      }
+
+      .color_hover-#{$color-key} {
+        &:hover {
+          color: $tone-value;
+        }
+      }
+
+      .glow_hover-#{$color-key} {
+        &:hover {
+          box-shadow: 0 4px 14px 0 $tone-value;
+        }
+      }
+    } @else {
+      .background_color-#{$color-key}-#{$tone-key} {
+        background-color: $tone-value;
+      }
+
+      .color-#{$color-key}-#{$tone-key} {
+        color: $tone-value;
+      }
+
+      .color_hover-#{$color-key}-#{$tone-key} {
+        &:hover {
+          color: $tone-value;
+        }
+      }
+
+      .glow_hover-#{$color-key}-#{$tone-key} {
+        &:hover {
+          box-shadow: 0 4px 14px 0 $tone-value;
+        }
       }
     }
   }

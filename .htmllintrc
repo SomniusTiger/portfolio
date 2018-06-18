@@ -1,5 +1,15 @@
 {
   "id-class-style": false,
   "indent-style": "spaces",
-  "indent-width": 2
+  "indent-width": 2,
+  "attr-bans": [
+    "onload",
+    "onunload",
+    "onblur",
+    "onclick",
+    "onfocus",
+    "onsearch",
+    "onselect",
+    "onsubmit"
+  ]
 }

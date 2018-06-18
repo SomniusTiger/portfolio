@@ -1,0 +1,39 @@
+// Individual project tiles on homepage
+.project_homepage {
+  border-radius: 7px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow $speed $ease;
+
+  .background_image {
+    height: 300px;
+  }
+
+  &-title {
+    bottom: 0;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    span {
+      background-color: color(black-a, 50);
+      border: solid 1px color(white-a, 100);
+      color: map-get($colors, true-white);
+      display: inline-block;
+      margin-bottom: 40px;
+      max-width: calc(100% - 40px);
+      padding: 15px 20px;
+      transition: background-color $speed $ease;
+    }
+  }
+
+  &:hover {
+    .project_homepage-title {
+      span {
+        background-color: color(black-a, 75);
+      }
+    }
+  }
+}

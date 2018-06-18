@@ -1,10 +1,27 @@
-// Contains all grid-related stylesheet
+// Contains all grid-related styles
+// Grid is based on flexbox
 .grid-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 980px;
+  padding: 0 20px;
   width: 100%;
+}
+
+$gutter: 40px;
+
+.grid-cell {
+  margin: 0 ($gutter / 2);
+}
+
+.grid-shrink {
+  flex-shrink: 1;
+}
+
+.grid-grow {
+  flex-grow: 1;
 }
 
 // Creates grid cells for multiple breakpoints.
@@ -12,21 +29,22 @@
 // Mobile, Tablet, Desktop
 @for $i from 1 through 12 {
   .grid-cell-mobile-#{$i} {
-    width: #{($i/12) * 100%};
+    flex: 0 0 calc(#{($i/12) * 100%} - #{$gutter});
   }
 }
-@media screen and (min-width: 600px) {
+
+@include media-tablet {
   @for $i from 1 through 12 {
     .grid-cell-tablet-#{$i} {
-      width: #{($i/12) * 100%};
+      flex: 0 0 calc(#{($i/12) * 100%} - #{$gutter});
     }
   }
 }
 
-@media screen and (min-width: 960px) {
+@include media-desktop {
   @for $i from 1 through 12 {
     .grid-cell-desktop-#{$i} {
-      width: #{($i/12) * 100%};
+      flex: 0 0 calc(#{($i/12) * 100%} - #{$gutter});
     }
   }
 }
