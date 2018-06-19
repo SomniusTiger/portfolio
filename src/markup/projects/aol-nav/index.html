@@ -8,8 +8,9 @@
 
     <link rel="stylesheet" href="../../dist/styles/main.min.css">
   </head>
+
   <body class="background_color-greyscale-darkest color-greyscale-lightest">
-    <header class="align_items-flex-end grid-container margin-top-80">
+    <header class="align_items-flex-end grid-container grid-container--project margin-top-80">
       <div class="grid-cell grid-cell-mobile-12 margin-bottom-10">
         <h1 class="font_size-25 font_weight-bold line_height-30 text_transform-uppercase">
           Eoin Thomas O’Hehir
@@ -21,6 +22,139 @@
         </h2>
       </div>
     </header>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            AOL.com Navigation
+          </h1>
+          <h2 class="project_section-subtitle">
+            A complete rebuild
+          </h2>
+          <p class="project_section-paragraph margin-top-40">
+            In mid-2016, I was tasked with executing a dramatic overhaul of the site navigation across all of AOL. This was a big project; not because of how complex it was, but because I was changing a reusable component used on every single page across the website.
+          </p>
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            The designs were already completed and signed off before they were passed to me. The navigation needed to work seamlessly with all pages, without breaking any existing designs. The new design did not add any new features, but I felt adding some slick animations on top of the clean new look would enhance the experience.
+          </p>
+        </div>
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="../../src/media/images/projects/navigation-1.png" alt="iPhone with AOL Navigation displayed on it">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Mobile First, Mobile Best
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            The biggest change on the site navigation was in mobile. Instead of sliding over a navigation bar from the left side and hiding the page under a transparent curtain, the new navigation completely took over the main page, still allowing the user to access their account information and making links much bigger and easier to tap.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            This is where the animation really shines through. Instead of hiding and showing the navigation background with its <code>display</code> property, I used carefully-timed <code>z-index</code> and <code>opacity</code> transitions to pop the navigation above page content and fade it in, resulting in a smooth, jitter-free transition.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            The Challenges
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            Making this work on all pages was difficult, because while most pages used the same template and styles, there were a number of edge cases to be accounted for.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            The obvious ones were pages that used different background colors, especially the pages using black instead of white. I had to keep the <code>background-color</code> of the navigation bar consistent with the page background, and made sure that the blue for the mobile navigation menu still shone through.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Maintaining Functionality
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            Some old features were taken out of the new design only to be put back, due to user demand. One of those features was including the local weather on desktop.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            The weather component used in the navigation needed to show the same results as the other location-based components on the page. Utilizing the commonly available API maintained by my colleagues, I was able to show consistent results even though the navigation and page components were in completely separate codebases.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            How I could have done it better
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            I originally kept all the navigation-based code to three main files: one for the markup, one for the styles, and one for the scripts. It initially made working on the navigation simple. However, as I kept working on this component and maintaining it after it was deployed, it became frustrating to sift through hundreds of lines of code just to get to the one part I needed to change.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            Splitting up this large component into smaller components, like separating the header navigation bar from the full mobile navigation menu, would have kept things much more logically separated. It would allow myself and other developers to go exactly where we need to instead of having to needlessly scroll through those giant files.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section project_section--summary padding-top-100 padding-bottom-100">
+      <div class="grid-container">
+        <div class="grid-cell grid-cell-mobile-12">
+          <h1 class="project_section-title">
+            What I learned
+          </h1>
+
+          <p class="project_section-paragraph text_align-left margin-top-40">
+            When working on components that are reused this often on a large website, making sure it works is just the first step. Building it in a way so that other developers find it easy to understand, maintain, and build upon is just as important.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-container grid-container--project justify_content-flex_end margin-top-60 margin-bottom-80">
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" href="mailto:mail@etohehir.com">
+        Contact
+      </a>
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="src/media/documents/etohehir-resume-2018.pdf">
+        Résumé
+      </a>
+    </footer>
     <script type="text/javascript" src="../../dist/scripts/main.min.js"></script>
   </body>
 </html>
