@@ -8,24 +8,142 @@
 
     <link rel="stylesheet" href="../../dist/styles/main.min.css">
   </head>
+
   <body class="background_color-greyscale-darkest color-greyscale-lightest">
-    <header class="align_items-flex-end grid-container margin-top-80">
-      <div class="grid-cell grid-cell-mobile-12 margin-bottom-10">
-        <h1 class="font_size-25 font_weight-bold line_height-30 text_transform-uppercase">
+    <header class="align_items-flex-end grid-container grid-container--project margin-top-80 text_align-left">
+      <a class="display-inline_block color-white-a-100 text_decoration-none grid-cell grid-cell-mobile-12" href="../../">
+        <h1 class="font_size-25 font_weight-bold line_height-30 margin-bottom-10 text_transform-uppercase">
           Eoin Thomas O’Hehir
         </h1>
-      </div>
-      <div class="grid-cell grid-cell-mobile-12">
+
         <h2 class="color-greyscale-light font_size-20 line_height-25 text_transform-uppercase">
           UX Engineer
         </h2>
-      </div>
+      </a>
     </header>
-    <footer class="grid-container justify_content-flex_end margin-top-60 margin-bottom-80">
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+
+          <h1 class="project_section-title">
+            Met Gala Bracket
+          </h1>
+          <h2 class="project_section-subtitle">
+            A fun toy with a fun solution
+          </h2>
+
+          <p class="project_section-paragraph margin-top-40">
+            We featured the Met Gala in 2017 on AOL, which is an event where fashion designers feature their latest dress designs on prominent figures.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            Using a bracketing system, we let users choose who was the best dressed, narrowing down their options one by one until they found their top choice.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+
+          <h1 class="project_section-title">
+            Creative Problem Solving
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            The bulk of the work was in creating the bracket system.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            I made a simple bracketing system that took in 16 selections, removing the unselected choices for every round, until there was only one remaining dress+. The user’s selections were recorded and then appended to the URL, which navigated the user to a page showing them all their selections. They could then share their result through a few social channels or by just copying the link.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            code sample of file needed
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+
+          <h1 class="project_section-title">
+            Language and Time Limitations
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            Executing the bracket system in the way I implemented it meant I needed to precisely manipulate arrays. Initially, I wanted to write this system server-side, so that the user wasn’t forced to wait for the JavaScript on the page to load before seeing their results. However, the server-side language used in our site framework was Twig, which is a PHP-based language specifically made for templating. The only functions available to me to manipulate arrays were <code>merge()</code>, which merges two arrays into one array, and <code>slice()</code>, which extracts a sequence of a sequence, mapping, or string. Functions like <code>push()</code>, <code>pop()</code>, or <code>splice()</code>, available in other languages, were not available in Twig, making array manipulation frustrating to deal with.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            It ended up taking more time executing the back-end implementation than it would have taken me by simply writing this on the client-side in JavaScript, so with a deadline looming, I scrapped my Twig code and rewrote the implementation in JavaScript. Realizing the load time was minimal and the user needed JavaScript to do the bracket anyways, this was the best choice for the time I had available to me.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+
+          <h1 class="project_section-title">
+            Possible Improvements
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            While I did not have the time to think too far outside the scope of this project, even so, the way I wrote this system has significant limitations. Firstly, my implementation requires the total number of choices in the bracket to be a power of 2. Other bracketing systems can include any number of people included in all sorts of ways, so looking through and seeing how similar bracketing systems worked with numbers that weren’t a power of 2 would have made this much more extensible and reusable.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            Secondly, it still does use JavaScript on the front-end for the results page, which is not ideal for my two-page implementation. Better ways to do it would be to either make the whole page be a small single-page app and be all on the front-end, or to still use Twig and take two slices of that array—around each choice that was passed over—and merge those two arrays during the loop of each “round.” That way, my solution is either all on the front end or all on the back end.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section project_section--summary padding-top-100 padding-bottom-100">
+      <div class="grid-container">
+        <div class="grid-cell grid-cell-mobile-12">
+          <h1 class="project_section-title">
+            In Conclusion
+          </h1>
+
+          <p class="project_section-paragraph text_align-left margin-top-40">
+            Giving sufficient time estimates is key in making sure you can make something the right way the first time. And, if your first solution doesn’t work the way you expect it to, there are always other methods you can try. However, I was able to reuse this solution for the 2018 Met Gala by simply swapping out the names and images.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-container grid-container--project justify_content-flex_end margin-top-60 margin-bottom-80">
       <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" href="mailto:mail@etohehir.com">
         Contact
       </a>
-      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="src/media/documents/etohehir-resume-2018.pdf">
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="../../src/media/documents/etohehir-resume-2018.pdf">
         Résumé
       </a>
     </footer>
