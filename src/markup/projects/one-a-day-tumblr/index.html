@@ -8,24 +8,89 @@
 
     <link rel="stylesheet" href="../../dist/styles/main.min.css">
   </head>
+
   <body class="background_color-greyscale-darkest color-greyscale-lightest">
-    <header class="align_items-flex-end grid-container margin-top-80">
-      <div class="grid-cell grid-cell-mobile-12 margin-bottom-10">
-        <h1 class="font_size-25 font_weight-bold line_height-30 text_transform-uppercase">
+    <header class="align_items-flex-end grid-container grid-container--project margin-top-80 text_align-left">
+      <a class="display-inline_block color-white-a-100 text_decoration-none grid-cell grid-cell-mobile-12" href="../../">
+        <h1 class="font_size-25 font_weight-bold line_height-30 margin-bottom-10 text_transform-uppercase">
           Eoin Thomas O’Hehir
         </h1>
-      </div>
-      <div class="grid-cell grid-cell-mobile-12">
+
         <h2 class="color-greyscale-light font_size-20 line_height-25 text_transform-uppercase">
           UX Engineer
         </h2>
-      </div>
+      </a>
     </header>
-    <footer class="grid-container justify_content-flex_end margin-top-60 margin-bottom-80">
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            One-A-Day Tumblr Theme
+          </h1>
+
+          <h2 class="project_section-subtitle">
+            A custom blog build
+          </h2>
+
+          <p class="project_section-paragraph margin-top-40">
+            A personal project of mine, I was asked to build a custom Tumblr theme to highlight a series of one-a-day illustrations. Editing the HTML directly on the Tumblr’s tools, however, was inefficient and there was no way to track state.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            I wanted a system that I could keep in version control and would allow me to easily copy and paste right into Tumblr’s HTML editor. Using Git and build tools with Grunt, that’s exactly what I created.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Designed for quick iterations
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            I needed to compile all markup, styles, and scripts down into one text file so that I could paste it into Tumblr’s HTML editor. So, I needed tools to both concatenate and compile all my code, but also to insert all of it into one file.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Using <a href="https://www.npmjs.com/package/grunt-html-build">grunt-html-build</a>, I took all my compiled styles and scripts and inserted it all into my one HTML file, which I was able to easily copy and paste into the HTML editor on Tumblr to quickly test and iterate on my code.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section project_section--summary padding-top-100 padding-bottom-100">
+      <div class="grid-container">
+        <div class="grid-cell grid-cell-mobile-12">
+          <h1 class="project_section-title">
+            In conclusion
+          </h1>
+
+          <p class="project_section-paragraph text_align-left margin-top-40">
+            This was a fun tool to build. I took the limited features available to me and used my own knowledge of build tools to make things much easier and pleasant to code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-container grid-container--project justify_content-flex_end margin-top-60 margin-bottom-80">
       <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" href="mailto:mail@etohehir.com">
         Contact
       </a>
-      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="src/media/documents/etohehir-resume-2018.pdf">
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="../../src/media/documents/etohehir-resume-2018.pdf">
         Résumé
       </a>
     </footer>

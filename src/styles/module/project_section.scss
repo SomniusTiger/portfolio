@@ -19,6 +19,15 @@
     font-size: 16px;
     line-height: 28px;
     opacity: 0.8;
+
+    a {
+      color: color(greyscale, light);
+      text-decoration: none;
+
+      &:hover {
+        color: color(greyscale, lightest);
+      }
+    }
   }
 
   &:nth-child(odd) {
@@ -59,12 +68,12 @@
   .project_section {
     &-title {
       font-size: 40px;
-      line-height: 64px;
+      line-height: 50px;
     }
 
     &-subtitle {
       font-size: 30px;
-      line-height: 34px;
+      line-height: 40px;
     }
 
     &-paragraph {

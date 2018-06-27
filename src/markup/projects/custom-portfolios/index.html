@@ -8,24 +8,116 @@
 
     <link rel="stylesheet" href="../../dist/styles/main.min.css">
   </head>
+
   <body class="background_color-greyscale-darkest color-greyscale-lightest">
-    <header class="align_items-flex-end grid-container margin-top-80">
-      <div class="grid-cell grid-cell-mobile-12 margin-bottom-10">
-        <h1 class="font_size-25 font_weight-bold line_height-30 text_transform-uppercase">
+    <header class="align_items-flex-end grid-container grid-container--project margin-top-80 text_align-left">
+      <a class="display-inline_block color-white-a-100 text_decoration-none grid-cell grid-cell-mobile-12" href="../../">
+        <h1 class="font_size-25 font_weight-bold line_height-30 margin-bottom-10 text_transform-uppercase">
           Eoin Thomas O’Hehir
         </h1>
-      </div>
-      <div class="grid-cell grid-cell-mobile-12">
+
         <h2 class="color-greyscale-light font_size-20 line_height-25 text_transform-uppercase">
           UX Engineer
         </h2>
-      </div>
+      </a>
     </header>
-    <footer class="grid-container justify_content-flex_end margin-top-60 margin-bottom-80">
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Custom Portfolios
+          </h1>
+
+          <h2 class="project_section-subtitle">
+            Static sites built to feature excellent design work
+          </h2>
+
+          <p class="project_section-paragraph margin-top-40">
+            Here, I’m featuring two different sites I built. One was built for <a href="http://jpfairchild.com/">JP Fairchild</a> and one was built for <a href="http://dannyswan.com/">Danny Swan</a>. In both cases, I was given designs and worked closely with each designer to show off their work in the best way possible. They serve the same purpose and are both static sites, but the way each one was built has different advantages.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            JP’s Portfolio
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            This site was built in Ruby on Rails. I had spent a fair amount of time learning the framework at work and learned enough to build and deploy a site to a VPS on my own. 
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            I utilized the templating available in Rails for the common elements like headers and footers, and letting the framework handle building assets was nice to not have to worry about, but the main convenience was in deployment.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Having mostly used FTP to deploy personal sites in my early years, I was exceedingly pleased at <a href="https://capistranorb.com">Capistrano</a>’s ability to make deployment as easy as a single console command.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Danny’s Portfolio
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            With this site, I went totally static. No frameworks, no libraries. Command-line tools for deployment were unavailable to me because this site had to be on shared hosting.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Not much JavaScript was needed aside from a scrolling transition on the homepage. So, the bulk of this work was in CSS and HTML. I made sure to follow best practices, like using the best parts from <a href="http://getbem.com/introduction/">BEM</a> and <a href="https://smacss.com">SMACSS</a> for organizing and writing my styles.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            I had no routing controller available to me, so instead, I carefully named folders and placed an index.html file inside of each one. That way, I was still able to control the URLs of each project page.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section project_section--summary padding-top-100 padding-bottom-100">
+      <div class="grid-container">
+        <div class="grid-cell grid-cell-mobile-12">
+          <h1 class="project_section-title">
+            In conclusion
+          </h1>
+
+          <p class="project_section-paragraph text_align-left margin-top-40">
+            Doing these projects on my own, having complete control over each codebase and knowing exactly what I needed, I was able to be very choosy about the tools I used. These static sites didn’t need much, and why would I want to make their users download an entire JavaScript framework when all they needed was styles and markup? Making these sites taught me the importance of knowing the right tool for the job.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-container grid-container--project justify_content-flex_end margin-top-60 margin-bottom-80">
       <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" href="mailto:mail@etohehir.com">
         Contact
       </a>
-      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="src/media/documents/etohehir-resume-2018.pdf">
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="../../src/media/documents/etohehir-resume-2018.pdf">
         Résumé
       </a>
     </footer>

@@ -8,24 +8,128 @@
 
     <link rel="stylesheet" href="../../dist/styles/main.min.css">
   </head>
+
   <body class="background_color-greyscale-darkest color-greyscale-lightest">
-    <header class="align_items-flex-end grid-container margin-top-80">
-      <div class="grid-cell grid-cell-mobile-12 margin-bottom-10">
-        <h1 class="font_size-25 font_weight-bold line_height-30 text_transform-uppercase">
+    <header class="align_items-flex-end grid-container grid-container--project margin-top-80 text_align-left">
+      <a class="display-inline_block color-white-a-100 text_decoration-none grid-cell grid-cell-mobile-12" href="../../">
+        <h1 class="font_size-25 font_weight-bold line_height-30 margin-bottom-10 text_transform-uppercase">
           Eoin Thomas O’Hehir
         </h1>
-      </div>
-      <div class="grid-cell grid-cell-mobile-12">
+
         <h2 class="color-greyscale-light font_size-20 line_height-25 text_transform-uppercase">
           UX Engineer
         </h2>
-      </div>
+      </a>
     </header>
-    <footer class="grid-container justify_content-flex_end margin-top-60 margin-bottom-80">
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Trump Campaign Promises Tracker
+          </h1>
+
+          <h2 class="project_section-subtitle">
+            Ensuring accountability and transparency
+          </h2>
+
+          <p class="project_section-paragraph margin-top-40">
+            Trump made a lot of promises during the campaign. Our team wanted to create a way to show exactly how much of his promises he ended up keeping.
+          </p>
+
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Library Management
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            This project made use of two libraries: <a href="https://desandro.com/#isotope">Isotope</a> and <a href="https://d3js.org">D3</a>. They are relatively hefty libraries, so we needed to make sure users only downloaded what they needed and when they needed it.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            So, I made sure to only load in those libraries once this page was loaded.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            How it works
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            Editors kept track of the state of promises and updated them accordingly. Users could filter the promises by category, status, and how recently updated they were.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Isotope powered the filtering and sorting, and I used D3 to draw a pie chart showing the status of all promises at a glance.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section padding-top-80 padding-bottom-80">
+      <div class="grid-container grid-container--project">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+          <h1 class="project_section-title">
+            Design Execution
+          </h1>
+
+          <p class="project_section-paragraph margin-top-40">
+            User experience was key to making this work. However, I was only given designs for desktop, and this needed to work for all devices.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            So, the design decisions made on mobile were all made by me. Using the design language already established in the desktop mockups, I made sure to keep the page hierarchy in a way that made sense for mobile.
+          </p>
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        </div>
+      </div>
+    </section>
+
+    <section class="project_section project_section--summary padding-top-100 padding-bottom-100">
+      <div class="grid-container">
+        <div class="grid-cell grid-cell-mobile-12">
+          <h1 class="project_section-title">
+            In conclusion
+          </h1>
+
+          <p class="project_section-paragraph text_align-left margin-top-40">
+            I learned to only load in what I needed, and to use the skills I had to get the job done. I have been given desktop designs and have created mobile designs from them many times, and a task like this is perfectly suited for my skillset.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-container grid-container--project justify_content-flex_end margin-top-60 margin-bottom-80">
       <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" href="mailto:mail@etohehir.com">
         Contact
       </a>
-      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="src/media/documents/etohehir-resume-2018.pdf">
+      <a class="footer-link color-greyscale-light color_hover-greyscale-lightest font_size-20 text_decoration-none text_transform-uppercase" target="_blank" href="../../src/media/documents/etohehir-resume-2018.pdf">
         Résumé
       </a>
     </footer>
