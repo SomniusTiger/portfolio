@@ -1,6 +1,26 @@
 // General sizing stylesheet
+.height-full {
+  height: 100%;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.max_height-full {
+  max-height: 100%;
+}
+
+.max_height-400 {
+  max-height: 400px;
+}
+
 .width-full {
   width: 100%;
+}
+
+.width-auto {
+  width: auto;
 }
 
 .max_width-full {

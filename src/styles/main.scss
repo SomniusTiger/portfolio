@@ -11,8 +11,10 @@
 @import "layout/spacing";
 @import "layout/alignment";
 @import "layout/size";
-@import "layout/footer";
+@import "layout/visibility";
 
+@import "module/footer";
 @import "module/background_image";
 @import "module/project_homepage";
 @import "module/project_section";
+@import "module/image_fill";

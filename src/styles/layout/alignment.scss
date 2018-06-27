@@ -5,6 +5,10 @@
   align-items: flex-end;
 }
 
+.align_items-stretch {
+  align-items: stretch;
+}
+
 .align_self-flex_end {
   align-self: flex-end;
 }
@@ -15,4 +19,13 @@
 
 .justify_content-flex_end {
   justify-content: flex-end;
+}
+
+// Position
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
 }
