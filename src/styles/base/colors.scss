@@ -4,10 +4,16 @@
 
 // Array of all colors
 $colors: (
-  true-white: white,
+  black-true: (
+    base: black
+  ),
+  white-true: (
+    base: white
+  ),
   white-a: (
     5: rgba(255, 255, 255, 0.05),
     10: rgba(255, 255, 255, 0.1),
+    20: rgba(255, 255, 255, 0.2),
     25: rgba(255, 255, 255, 0.25),
     50: rgba(255, 255, 255, 0.5),
     75: rgba(255, 255, 255, 0.75),
@@ -15,13 +21,13 @@ $colors: (
   ),
   black-a: (
     10: rgba(0, 0, 0, 0.1),
+    20: rgba(0, 0, 0, 0.2),
     25: rgba(0, 0, 0, 0.25),
     40: rgba(0, 0, 0, 0.4),
     50: rgba(0, 0, 0, 0.5),
     75: rgba(0, 0, 0, 0.75),
     100: rgba(0, 0, 0, 1)
   ),
-  true-black: black,
   greyscale: (
     lightest: #f7f7f7,
     light: #cacaca,
@@ -39,6 +45,12 @@ $colors: (
   ),
   magenta: (
     base: #862238
+  ),
+  pink: (
+    base: #fc8686
+  ),
+  trump_red: (
+    base: #f15f60
   )
 );
 

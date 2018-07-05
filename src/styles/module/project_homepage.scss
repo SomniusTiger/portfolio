@@ -20,7 +20,8 @@
     span {
       background-color: color(black-a, 50);
       border: solid 1px color(white-a, 100);
-      color: map-get($colors, true-white);
+      border-radius: 4px;
+      color: color(white-true, base);
       display: inline-block;
       margin-bottom: 40px;
       max-width: calc(100% - 40px);

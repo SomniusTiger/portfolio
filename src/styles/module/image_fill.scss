@@ -3,11 +3,11 @@
 
 .image_fill {
   &--right {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   &--left {
-    margin-top: 40px;
+    padding-top: 40px;
   }
 }
 
@@ -17,15 +17,15 @@
     width: auto;
 
     &--right {
-      margin-bottom: 0;
-      margin-right: 20px;
+      padding-bottom: 0;
+      padding-right: 20px;
       right: 0;
     }
 
     &--left {
       left: 0;
-      margin-left: 20px;
-      margin-top: 0;
+      padding-left: 20px;
+      padding-top: 0;
     }
   }
 }

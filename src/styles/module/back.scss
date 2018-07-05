@@ -1,0 +1,24 @@
+// Back button at the top of project pages
+.back {
+  background-color: color(white-a, 10);
+  border-radius: 4px;
+  color: color(white-true, base);
+  display: inline-block;
+  left: 30px;
+  padding: 19px 28px 21px 22px;
+  position: absolute;
+  text-decoration: none;
+  top: -90px;
+  transition: background-color $speed $ease;
+
+  &:hover {
+    background-color: color(white-a, 20);
+  }
+}
+
+@media screen and (min-width: 1435px) {
+  .back {
+    left: -120px;
+    top: 4px;
+  }
+}
