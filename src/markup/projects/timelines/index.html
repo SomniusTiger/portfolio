@@ -48,38 +48,62 @@
         </div>
 
         <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+          <img class="width-full" src="../../src/media/images/projects/timelines-mobile.png" alt="Screenshot of the Election Timeline page on AOL.com on an iPhone X">
         </div>
       </div>
     </section>
 
     <section class="project_section padding-top-80 padding-bottom-80">
       <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6">
 
           <h1 class="project_section-title">
             Ease of Reuse
           </h1>
 
-          <p class="project_section-paragraph margin-top-40">
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
             I had to ensure that the styles and scripts for each timeline could be reused with minimal changes. To do this, I made sure to have consistent naming schemes in my CSS classes and mainly used attribute selectors in my JavaScript for each component. Doing it this way meant I only needed to include one script file, and that code would work for all of those particular components on every timeline page.
-          </p>
-
-          <p class="project_section-paragraph margin-top-40">
-            code example needed
           </p>
 
         </div>
 
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6">
+          <img class="width-full" src="../../src/media/images/projects/timelines-desktop.jpg" alt="Screenshot of the Election Timeline page on AOL.com on desktop">
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 min_width-0">
+          <h2 class="project_section-subtitle margin-top-40">
+            Code Example
+          </h2>
+
+          <p class="project_section-paragraph margin-top-20 margin-bottom-40">
+            In my JavaScript code for social sharing, I was able to write this once and enable sharing for each module on every timeline page. Note the bolded attribute selector below.
+          </p>
+
+          <div class="code_block margin-bottom-40 margin-top-40">
+<pre><code>$('#bon-cw').on('click', '<strong>.bon-grid-item[class$="timeline"]</strong> .share-mobile .share-btn', function() {
+
+  var parent = $(this).parents('.share-mobile');
+
+  if (!parent.hasClass('open')) {
+
+    parent.addClass('open');
+
+    parent.parents('.date-line').addClass('mobile-open');
+
+  }
+
+  animateShares($(this).parents('.share-mobile'), 'show');
+
+});</code></pre>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="project_section padding-top-80 padding-bottom-80">
       <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+        <div class="grid-cell grid-cell-mobile-12">
 
           <h1 class="project_section-title">
             Metrics
@@ -89,10 +113,6 @@
             When looking at the data for the timelines, the most interesting thing is that users both spent a lot of time on the page and kept coming back. That absolutely makes sense. The way this page is designed means that content gets updated over time by the AOL editors, so users who keep coming back get to see updated stories and get to see those stories in context, too.
           </p>
 
-        </div>
-
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="placeholder">
         </div>
       </div>
     </section>

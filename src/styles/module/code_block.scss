@@ -1,0 +1,8 @@
+// Container element for blocks of code, to wrap around a <pre> tag
+.code_block {
+  background-color: color(white-a, 5);
+  border-radius: 4px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
