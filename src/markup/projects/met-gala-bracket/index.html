@@ -90,7 +90,15 @@
           </h1>
 
           <p class="project_section-paragraph margin-top-40">
-            Executing the bracket system in the way I implemented it meant I needed to precisely manipulate arrays. Initially, I wanted to write this system server-side, so that the user wasn’t forced to wait for the JavaScript on the page to load before seeing their results. However, the server-side language used in our site framework was Twig, which is a PHP-based language specifically made for templating. The only functions available to me to manipulate arrays were <code>merge()</code>, which merges two arrays into one array, and <code>slice()</code>, which extracts a sequence of a sequence, mapping, or string. Functions like <code>push()</code>, <code>pop()</code>, or <code>splice()</code>, available in other languages, were not available in Twig, making array manipulation frustrating to deal with.
+            Executing the bracket system in the way I implemented it meant I needed to precisely manipulate arrays. Initially, I wanted to write this system server-side, so that the user wasn’t forced to wait for the JavaScript on the page to load before seeing their results.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            However, the server-side language used in our site framework was Twig, which is a PHP-based language specifically made for templating. The only functions available to me to manipulate arrays were <code>merge()</code>, which merges two arrays into one array, and <code>slice()</code>, which extracts a sequence of a sequence, mapping, or string.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Functions like <code>push()</code>, <code>pop()</code>, or <code>splice()</code>, available in other languages, were not available in Twig, making array manipulation frustrating to deal with.
           </p>
 
           <p class="project_section-paragraph margin-top-40 margin-bottom-40">
@@ -128,11 +136,19 @@
           </h1>
 
           <p class="project_section-paragraph margin-top-40">
-            While I did not have the time to think too far outside the scope of this project, even so, the way I wrote this system has significant limitations. Firstly, my implementation requires the total number of choices in the bracket to be a power of 2. Other bracketing systems can include any number of people included in all sorts of ways, so looking through and seeing how similar bracketing systems worked with numbers that weren’t a power of 2 would have made this much more extensible and reusable.
+            While I did not have the time to think too far outside the scope of this project, even so, the way I wrote this system has significant limitations. Firstly, my implementation requires the total number of choices in the bracket to be a power of 2.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40">
+            Other bracketing systems can include any number of people included in all sorts of ways, so looking through and seeing how similar bracketing systems worked with numbers that weren’t a power of 2 would have made this much more extensible and reusable.
           </p>
 
           <p class="project_section-paragraph margin-top-40 margin-bottom-40">
-            Secondly, it still does use JavaScript on the front-end for the results page, which is not ideal for my two-page implementation. Better ways to do it would be to either make the whole page be a small single-page app and be all on the front-end, or to still use Twig and take two slices of that array—around each choice that was passed over—and merge those two arrays during the loop of each “round.” That way, my solution is either all on the front end or all on the back end.
+            Secondly, it still does use JavaScript on the front-end for the results page, which is not ideal for my two-page implementation. 
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            Better ways to do it would be to either make the whole page be a small single-page app and be all on the front-end, or to still use Twig and take two slices of that array—around each choice that was passed over—and merge those two arrays during the loop of each “round.” That way, my solution is either all on the front end or all on the back end.
           </p>
 
         </div>
