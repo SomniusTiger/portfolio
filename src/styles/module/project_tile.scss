@@ -1,5 +1,5 @@
 // Individual project tiles on homepage
-.project_homepage {
+.project_tile {
   border-radius: 7px;
   margin-bottom: 40px;
   overflow: hidden;
@@ -31,9 +31,22 @@
   }
 
   &:hover {
-    .project_homepage-title {
+    .project_tile-title {
       span {
         background-color: color(black-a, 75);
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    opacity: 0.2;
+
+    &:hover {
+      .project_tile-title {
+        span {
+          background-color: color(black-a, 50);
+        }
       }
     }
   }
