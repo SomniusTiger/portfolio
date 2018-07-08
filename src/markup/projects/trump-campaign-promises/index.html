@@ -26,9 +26,9 @@
       </a>
     </header>
 
-    <section class="project_section padding-top-80 padding-bottom-80">
-      <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+    <section class="project_section padding-top-80 padding-bottom-80 overflow-hidden">
+      <div class="grid-container grid-container--project align_items-stretch">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6">
           <h1 class="project_section-title">
             Trump Campaign Promises Tracker
           </h1>
@@ -37,21 +37,25 @@
             Ensuring accountability and transparency
           </h2>
 
-          <p class="project_section-paragraph margin-top-40">
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
             Trump made a lot of promises during the campaign. Our team wanted to create a way to show exactly how much of his promises he ended up keeping.
+          </p>
+
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
+            We created a page where users can both see the percentage of promises that had been kept, broken, or were in some other status, and let users filter and sort individual promises to find out more information about them.
           </p>
 
         </div>
 
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6 position-relative">
+          <img class="width-full image_fill image_fill--left height-full" src="../../src/media/images/projects/trump_campaign_promises-desktop.jpg" alt="Desktop screenshot of Trump Campaign Promises page">
         </div>
       </div>
     </section>
 
     <section class="project_section padding-top-80 padding-bottom-80">
       <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-5">
           <h1 class="project_section-title">
             Library Management
           </h1>
@@ -60,20 +64,49 @@
             This project made use of two libraries: <a href="https://desandro.com/#isotope">Isotope</a> and <a href="https://d3js.org">D3</a>. They are relatively hefty libraries, so we needed to make sure users only downloaded what they needed and when they needed it.
           </p>
 
-          <p class="project_section-paragraph margin-top-40">
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
             So, I made sure to only load in those libraries once this page was loaded.
           </p>
         </div>
 
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-7 min_width-0">
+          <div class="code_block">
+<pre><code>this.getIsotope = function() {
+  // Only run if promises are present on the page
+  if ( $('.bon-grid-item.news-trump-promises.module-promise').length &gt; 0 ) {
+    $.ajaxSetup({
+      cache: true
+    });
+    $.getScript('https://s.aolcdn.com/aoldotcom-releases/trump-promises/isotope.pkgd.min.js', function() {
+      self.startIsotope();
+    });
+    $.ajaxSetup({
+      cache: false
+    });
+  }
+};
+
+this.getD3 = function() {
+  if ( $('.bon-grid-item.news-trump-promises.module-graph').length &gt; 0 ) {
+    $.ajaxSetup({
+      cache: true
+    });
+    $.getScript('https://s.aolcdn.com/aoldotcom-releases/trump-promises/d3.min.js', function() {
+      self.createGraph();
+    });
+    $.ajaxSetup({
+      cache: false
+    });
+  }
+};</code></pre>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="project_section padding-top-80 padding-bottom-80">
       <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6">
           <h1 class="project_section-title">
             How it works
           </h1>
@@ -82,20 +115,20 @@
             Editors kept track of the state of promises and updated them accordingly. Users could filter the promises by category, status, and how recently updated they were.
           </p>
 
-          <p class="project_section-paragraph margin-top-40">
+          <p class="project_section-paragraph margin-top-40 margin-bottom-40">
             Isotope powered the filtering and sorting, and I used D3 to draw a pie chart showing the status of all promises at a glance.
           </p>
         </div>
 
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-desktop-6">
+          <img class="width-full" src="../../src/media/images/projects/trump_campaign_promises-promises-desktop.jpg" alt="Desktop screenshot of Trump Campaign Promises page, showing the promises with filtering and sorting selects">
         </div>
       </div>
     </section>
 
     <section class="project_section padding-top-80 padding-bottom-80">
       <div class="grid-container grid-container--project">
-        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-8">
+        <div class="grid-cell grid-cell-mobile-12">
           <h1 class="project_section-title">
             Design Execution
           </h1>
@@ -104,13 +137,21 @@
             User experience was key to making this work. However, I was only given designs for desktop, and this needed to work for all devices.
           </p>
 
-          <p class="project_section-paragraph margin-top-40">
+          <p class="project_section-paragraph margin-top-40 margin-bottom-60">
             So, the design decisions made on mobile were all made by me. Using the design language already established in the desktop mockups, I made sure to keep the page hierarchy in a way that made sense for mobile.
           </p>
         </div>
 
         <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
-          <img class="width-full" src="https://placehold.it/600/600" alt="Placeholder">
+          <img class="width-full margin-bottom-20" src="../../src/media/images/projects/trump_campaign_promises-mobile-1.png" alt="Mobile screenshot of Trump Campaign Promises page, at the top">
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full margin-bottom-20" src="../../src/media/images/projects/trump_campaign_promises-mobile-2.png" alt="Mobile screenshot of Trump Campaign Promises page, at the middle">
+        </div>
+
+        <div class="grid-cell grid-cell-mobile-12 grid-cell-tablet-4">
+          <img class="width-full margin-bottom-20" src="../../src/media/images/projects/trump_campaign_promises-mobile-3.png" alt="Mobile screenshot of Trump Campaign Promises page, at the bottom">
         </div>
       </div>
     </section>
