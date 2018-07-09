@@ -61,6 +61,12 @@
   &--summary {
     width: 100%;
   }
+
+  &--no_alternation {
+    &:nth-child(odd) {
+      background-color: transparent;
+    }
+  }
 }
 
 .project_summary {

@@ -11,6 +11,10 @@
   }
 }
 
+.rounded {
+  border-radius: 7px;
+}
+
 @include media-desktop {
   .image_fill {
     position: absolute;
