@@ -1,11 +1,11 @@
 // Main SCSS file that imports all other files
 
 @import "base/reset";
+@import "base/responsive";
 @import "base/colors";
 @import "base/variables";
 @import "base/config";
 @import "base/typography";
-@import "base/responsive";
 
 @import "layout/grid";
 @import "layout/spacing";

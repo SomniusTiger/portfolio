@@ -39,3 +39,9 @@ $weights: (bold, regular, 500); // Leave this variable alone
 .text_decoration-none {
   text-decoration: none;
 }
+
+@include media-tablet {
+  .text_align-right-tablet {
+    text-align: right;
+  }
+}
